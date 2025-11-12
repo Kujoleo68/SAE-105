@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-image: url(../img/fond.png);
+}
+img {
+    width: 8%;
+}
+header {
+    margin: 16px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+footer {
+    background-color: #fff;
+}
