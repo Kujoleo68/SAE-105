@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+    background-image: url("/img/foret.png");
+    min-height: 100vh;
+}
+header>img {
+    width: 8%;
+}
+header {
+    margin: 16px;
+    padding: 16px;
+    font-size: 24px;
+    background-color: #ffffff7c;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+footer {
+    background-color: #fff;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+main>div {
+    display: flex;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+main>div>a>img {
+    width: 400%;
+    image-rendering: pixelated;
+}

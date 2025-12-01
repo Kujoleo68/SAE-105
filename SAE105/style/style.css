@@ -1,18 +1,50 @@
 body {
     margin: 0;
-    background-image: url(../img/fond.png);
 }
 img {
     width: 8%;
 }
 header {
+    position: fixed;
     margin: 16px;
     padding: 16px;
-    background-color: #fff;
+    font-size: 24px;
+    background-color: #ffffff7c;
     border-radius: 16px;
     display: flex;
     align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 footer {
     background-color: #fff;
+}
+video {
+    position: fixed;
+    z-index: -1;
+    
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+main>a { 
+    position: fixed;
+    background-color: #ffffff7c;
+    margin-top: 400px;
+    margin-bottom: auto;
+    padding: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+main>img {
+    margin-top: 650px;
 }
