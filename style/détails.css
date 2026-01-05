@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    min-height: 100vh;
+    /* Garantit que le body prend au minimum toute la hauteur visible */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* évite le scroll horizontal */
+}
+
+/* Fond animé */
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* La vidéo remplit tout l'espace en gardant ses proportions + Les bords sont rognés si nécessaire */
+    z-index: -1;
+    /* Place la vidéo derrière tous les autres éléments --> valeur négative = arrière-plan */
+}
+
+/* Cotenu principal */
+
+main {
+    flex: 1;
+    /* Raccourci pour flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+    gap: 48px;
+    padding: 0px 16px;
+    min-height: 100vh;
+}
+
+/* Bouton de retour */
+
+.btn-retour {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    /* ease = courbe d'accélération (lent→rapide→lent) */
+}
+
+.btn-retour:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    transform: scale(1.05);
+    /* Agrandit l'élément de 5% */
+}
+
+
+.sae-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* En-tête */
+
+.sae-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.sae-titre {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* métadonnées (code SAE + semestre) */
+
+.sae-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 28px;
+}
+
+.sae-code {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 2px solid white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Badge du semestre */
+
+.sae-semestre {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Sections */
+
+.sae-section {
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.section-titre {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Contenu textuel des sections (description, etc.) */
+
+.section-content {
+    font-size: 20px;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* Compétence */
+
+.competences-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.competence-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 24px;
+    border: 2px solid white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* Apprentissages Critiques */
+
+.ac-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.ac-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid white;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.ac-code {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.ac-description {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+}
+
+/* Ressources */
+
+.ressources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ressource-item {
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Bouton PDF */
+
+.pdf-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-pdf {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.btn-pdf:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    text-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Message d'erreur */
+
+.error {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-top: 100px;
+}

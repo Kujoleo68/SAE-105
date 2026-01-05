@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    min-height: 100vh;
+    /* Garantit que le body prend au minimum toute la hauteur visible */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* évite le scroll horizontal */
+}
+
+/* Fond animé */
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* La vidéo remplit tout l'espace en gardant ses proportions + Les bords sont rognés si nécessaire */
+    z-index: -1;
+    /* Place la vidéo derrière tous les autres éléments --> valeur négative = arrière-plan */
+}
+
+/* Boîte de dialogue */
+
+.textbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    padding-top: 30px;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.textbox>img {
+    width: 40%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Cotenu principal */
+
+main {
+    flex: 1;
+    /* Raccourci pour flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+    gap: 48px;
+    padding: 0px 16px;
+    min-height: 100vh;
+}
+
+/* Bouton de retour */
+
+.btn-retour {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    /* ease = courbe d'accélération (lent→rapide→lent) */
+}
+
+.btn-retour:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    transform: scale(1.05);
+    /* Agrandit l'élément de 5% */
+}
+
+/* Boutons reliant les SAE */
+
+.pokeball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.SAEbtn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    min-width: 150px;
+    min-height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    image-rendering: pixelated;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour la lisibilité */
+    padding-top: 120px; /* Pousse le texte vers le bas */
+}
+
+.SAEbtn:hover {
+    transform: scale(1.1);
+    /* Agrandit l'élément de 10% */
+}

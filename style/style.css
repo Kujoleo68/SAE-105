@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* évite le scroll horizontal */
+}
+
+/* Fond animé */
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* La vidéo remplit tout l'espace en gardant ses proportions + Les bords sont rognés si nécessaire */
+    z-index: -1;
+    /* Place la vidéo derrière tous les autres éléments --> valeur négative = arrière-plan */
+}
+
+/* Boîte de dialogue */
+
+.textbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.textbox>img {
+    width: 40%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Cotenu principal */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 0px 16px;
+    min-height: 100vh;
+}
+
+/* Bouton principal */
+
+main>a {
+    background-color: rgba(255, 255, 255, 0.49);
+    backdrop-filter: blur(10px);
+    padding: 32px 64px;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 400;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    /* ease = courbe d'accélération (lent→rapide→lent) */
+    text-align: center;
+}
+
+main>a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    /* Agrandit l'élément de 5% */
+}
+
+/* Animation de moustillon */
+
+main>img {
+    min-width: 9%;
+    height: auto;
+    image-rendering: pixelated;
+    /* fixe la mauvaise qualité du sprite de moustillon */
+}
